@@ -1,1 +1,40 @@
-<html><head><title>Flávia Fernandes Confeitaria</title></head><body>Bem-vindo!</body></html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flávia Fernandes Confeitaria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <img src="logo.png" alt="Flávia Fernandes Confeitaria" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#pedido">Fazer Pedido</a></li>
+        <li><a href="https://instagram.com/sua_conta" target="_blank">Instagram</a></li>
+        <li><a href="auth.html">Área Administrativa</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="pedido" id="pedido">
+    <h2>Fazer um Pedido</h2>
+    <form action="https://confeitaria-backend.onrender.com/pedido" method="POST">
+      <label>Nome:
+        <input type="text" name="nome" required>
+      </label>
+      <label>Email:
+        <input type="email" name="email" required>
+      </label>
+      <label>Mensagem ou Pedido:
+        <textarea name="mensagem" required></textarea>
+      </label>
+      <button type="submit">Enviar Pedido</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Flávia Fernandes Confeitari
