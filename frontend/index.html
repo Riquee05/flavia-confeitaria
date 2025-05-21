@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Flávia Fernandes Confeitaria</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header class="topo">
-    <img src="logo.png" alt="Flávia Fernandes Confeitaria" class="logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="#pedido">Fazer Pedido</a></li>
-        <li><a href="https://www.instagram.com/confeitaria_flaviafernandes?igsh=MXI4bWg5aWg1MW91Nw==" target="_blank">Instagram</a></li>
-        <li><a href="auth.html">Área Administrativa</a></li>
-      </ul>
-    </nav>
+  <header>
+    <img src="imagens/logo.jpg" alt="Logo da Confeitaria" class="logo">
+    <h1>Bolos e Doces Personalizados, feitos com Carinho</h1>
+    <a href="https://www.instagram.com/flaviafernandesconfeitaria/" target="_blank">Instagram</a>
   </header>
 
-  <section class="pedido" id="pedido">
+  <section class="galeria">
+    <h2>Galeria</h2>
+    <div class="fotos">
+      <!-- Substitua os nomes conforme os arquivos na pasta /imagens -->
+      <img src="imagens/bolo1.jpg" alt="Bolo decorado">
+      <img src="imagens/bolo2.jpg" alt="Doces personalizados">
+      <!-- Mais imagens -->
+    </div>
+  </section>
+
+  <section class="pedido">
     <h2>Fazer um Pedido</h2>
     <form action="https://confeitaria-backend.onrender.com/pedido" method="POST">
-      <label>Nome:
-        <input type="text" name="nome" required>
-      </label>
-      <label>Email:
-        <input type="email" name="email" required>
-      </label>
-      <label>Mensagem ou Pedido:
-        <textarea name="mensagem" required></textarea>
-      </label>
+      <label>Nome: <input type="text" name="nome" required></label>
+      <label>Email: <input type="email" name="email" required></label>
+      <label>Mensagem ou Pedido: <textarea name="mensagem" required></textarea></label>
       <button type="submit">Enviar Pedido</button>
     </form>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Flávia Fernandes Confeitaria
+</body>
+</html>
