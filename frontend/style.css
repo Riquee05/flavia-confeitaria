@@ -1,43 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --rosa-claro: #fff0f5;
+  --rosa: #ffb6c1;
+  --lilas: #d8bfd8;
+  --roxo: #b19cd9;
+  --branco: #ffffff;
+  --cinza: #555;
+}
+
 body {
-  font-family: sans-serif;
   margin: 0;
-  background: #fff7f9;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
+  background: var(--rosa-claro);
+  color: var(--cinza);
 }
-.logo {
-  max-width: 200px;
-  display: block;
-  margin: 1rem auto;
-}
-header, section {
+
+header {
+  background: linear-gradient(to right, var(--rosa), var(--lilas));
+  padding: 40px 20px;
   text-align: center;
-  padding: 2rem;
+  color: var(--cinza);
+  border-bottom: 4px solid var(--roxo);
 }
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
+
+header .logo {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  margin: 0;
+}
+
+header a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: var(--roxo);
+  color: var(--branco);
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+header a:hover {
+  background: var(--rosa);
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1100px;
   margin: auto;
 }
-input, textarea {
-  padding: 0.5rem;
-  margin: 0.5rem 0;
+
+h2 {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5em;
+  color: var(--roxo);
+  margin-bottom: 40px;
 }
-button {
-  padding: 0.7rem;
-  background: #b93d65;
-  border: none;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+
+.galeria .fotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
-.fotos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+
+.galeria .fotos .foto-card {
+  background: var(--branco);
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ccc;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
-.fotos img {
-  width: 200px;
+
+.galeria .fotos .foto-card:hover {
+  transform: translateY(-5px);
+}
+
+.foto-card img {
+  width: 100%;
   border-radius: 10px;
+  object-fit: cover;
+  height: 180px;
+}
+
+.foto-card span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--cinza);
+}
+
+.pedido form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+  background: var(--branco);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #ccc;
+}
+
+.pedido label {
+  font-weight: bold;
+  color: var(--cinza);
+}
+
+.pedido input, 
+.pedido textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+.pedido button {
+  background: var(--roxo);
+  color: var(--branco);
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pedido button:hover {
+  background: var(--rosa);
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .galeria .fotos {
+    grid-template-columns: 1fr;
+  }
 }

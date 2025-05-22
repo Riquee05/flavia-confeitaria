@@ -5,35 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Flávia Fernandes Confeitaria</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="imagens/logo.jpg" alt="Logo da Confeitaria" class="logo">
-    <h1>Bolos e Doces Personalizados, feitos com Carinho</h1>
-    <a href="https://www.instagram.com/confeitaria_flaviafernandes?igsh=MXI4bWg5aWg1MW91Nw==" target="_blank">Instagram</a>
+  <nav class="navbar">
+    <div class="logo">Flávia Fernandes</div>
+    <ul class="menu">
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#pricing">PRICING</a></li>
+      <li><a href="#contacts">CONTACTS</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-text">
+      <h1>Bolos e Doces Personalizados</h1>
+      <p>Feitos com muito carinho</p>
+      <a href="https://www.instagram.com/confeitaria_flaviafernandes" target="_blank" class="btn">Instagram</a>
+    </div>
+    <div class="hero-img">
+      <img src="imagens/header-cake.png" alt="Bolos decorados">
+    </div>
   </header>
 
-  <section class="galeria">
+  <section class="galeria" id="services">
     <h2>Galeria</h2>
-    <div class="fotos">
-      <!-- Substitua os nomes conforme os arquivos na pasta /imagens -->
-      <img src="imagens/bolo1.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo2.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo3.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo4.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo5.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo6.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo7.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo8.jpg" alt="Bolo decorado">
-      <img src="imagens/boloninho.jpg" alt="Bolo de pote Diversos Sabores">
-      <img src="imagens/paomel.jpg" alt="Pães de Mel Diversos Sabores">
-      <img src="imagens/trufacoco.jpg" alt="Trufas de Chocolate Diversos Sabores">
-
-      <!-- Mais imagens -->
+    <div class="grid">
+      <div class="card"><img src="imagens/bolo1.jpg" alt="Bolo 1"><p>Bolo 1</p></div>
+      <div class="card"><img src="imagens/bolo2.jpg" alt="Bolo 2"><p>Bolo 2</p></div>
+      <div class="card"><img src="imagens/bolo3.jpg" alt="Bolo 3"><p>Bolo 3</p></div>
+      <div class="card"><img src="imagens/bolo4.jpg" alt="Bolo 4"><p>Bolo 4</p></div>
+      <div class="card"><img src="imagens/bolo5.jpg" alt="Bolo 5"><p>Bolo 5</p></div>
+      <div class="card"><img src="imagens/bolo6.jpg" alt="Bolo 6"><p>Bolo 6</p></div>
+      <div class="card"><img src="imagens/bolo7.jpg" alt="Bolo 7"><p>Bolo 7</p></div>
+      <div class="card"><img src="imagens/bolo8.jpg" alt="Bolo 8"><p>Bolo 8</p></div>
+      <div class="card"><img src="imagens/boloninho.jpg" alt="Bolo no Pote"><p>Bolo no Pote</p></div>
+      <div class="card"><img src="imagens/paomel.jpg" alt="Pão de Mel"><p>Pão de Mel</p></div>
+      <div class="card"><img src="imagens/trufacoco.jpg" alt="Trufa de Coco"><p>Trufa de Coco</p></div>
     </div>
   </section>
 
-  <section class="pedido">
+  <section class="pedido" id="contacts">
     <h2>Fazer um Pedido</h2>
     <form action="https://confeitaria-backend.onrender.com/pedido" method="POST">
       <label>Nome: <input type="text" name="nome" required></label>
@@ -42,5 +56,9 @@
       <button type="submit">Enviar Pedido</button>
     </form>
   </section>
+
+  <footer>
+    <p>&copy; 2025 Flávia Fernandes Confeitaria</p>
+  </footer>
 </body>
 </html>
