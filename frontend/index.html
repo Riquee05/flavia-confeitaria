@@ -5,109 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Flávia Fernandes Confeitaria</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff8fb;
-      color: #5e2a3d;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-      background-color: #ffd8e4;
-    }
-    header .logo {
-      width: 120px;
-      border-radius: 10px;
-    }
-    header h1 {
-      font-size: 1.5rem;
-      margin: 10px 0;
-    }
-    header a {
-      display: inline-block;
-      background-color: #ff99bb;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 20px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    header a:hover {
-      background-color: #e6739f;
-    }
-    .galeria {
-      padding: 20px;
-    }
-    .galeria h2 {
-      text-align: center;
-      font-size: 1.8rem;
-    }
-    .fotos {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 10px;
-      padding: 10px;
-    }
-    .fotos img {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .pedido {
-      text-align: center;
-      padding: 20px;
-    }
-    .pedido h2 {
-      font-size: 1.6rem;
-    }
-    .pedido a {
-      display: inline-block;
-      margin-top: 10px;
-      background-color: #25d366;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .pedido a:hover {
-      background-color: #1ebe5d;
-    }
-  </style>
 </head>
 <body>
   <header>
     <img src="imagens/logo.png" alt="Logo da Confeitaria" class="logo">
     <h1>Bolos e Doces Personalizados, feitos com Carinho</h1>
-    <a href="https://www.instagram.com/confeitaria_flaviafernandes?igsh=MXI4bWg5aWg1MW91Nw==" target="_blank">Instagram</a>
+    <nav>
+      <button onclick="scrollToSection('galeria')">Início</button>
+      <button onclick="scrollToSection('sobre')">Sobre</button>
+      <button onclick="scrollToSection('tabela')">Tabela de Preços</button>
+      <button onclick="abrirWhatsApp()">Fazer Pedido</button>
+      <a href="https://www.instagram.com/confeitaria_flaviafernandes" target="_blank">Instagram</a>
+    </nav>
   </header>
 
-  <section class="galeria">
+  <section id="sobre" class="sobre">
+    <h2>Sobre</h2>
+    <p>
+      Bem-vindo à Flávia Fernandes Confeitaria! Somos especializados em criar bolos e doces personalizados,
+      feitos com muito carinho e atenção aos detalhes. Cada produto é preparado artesanalmente,
+      buscando sempre encantar nossos clientes em cada mordida.
+    </p>
+  </section>
+
+  <section id="galeria" class="galeria">
     <h2>Galeria</h2>
     <div class="fotos">
-      <img src="imagens/bolo1.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo2.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo3.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo4.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo5.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo6.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo7.jpg" alt="Bolo decorado">
-      <img src="imagens/bolo8.jpg" alt="Bolo decorado">
-      <img src="imagens/boloninho.jpg" alt="Bolo de pote Diversos Sabores">
-      <img src="imagens/paomel.jpg" alt="Pães de Mel Diversos Sabores">
-      <img src="imagens/trufacoco.jpg" alt="Trufas de Chocolate Diversos Sabores">
+      <div class="foto"><img src="imagens/bolo1.jpg" alt="Bolo 1" onclick="ampliar(this)"><p>Bolo 1</p></div>
+      <div class="foto"><img src="imagens/bolo2.jpg" alt="Bolo 2" onclick="ampliar(this)"><p>Bolo 2</p></div>
+      <div class="foto"><img src="imagens/bolo3.jpg" alt="Bolo 3" onclick="ampliar(this)"><p>Bolo 3</p></div>
+      <div class="foto"><img src="imagens/bolo4.jpg" alt="Bolo 4" onclick="ampliar(this)"><p>Bolo 4</p></div>
+      <div class="foto"><img src="imagens/boloninho.jpg" alt="Bolo de pote" onclick="ampliar(this)"><p>Bolo de Pote</p></div>
+      <div class="foto"><img src="imagens/paomel.jpg" alt="Pão de mel" onclick="ampliar(this)"><p>Pão de Mel</p></div>
+      <div class="foto"><img src="imagens/trufacoco.jpg" alt="Trufa de coco" onclick="ampliar(this)"><p>Trufa de Coco</p></div>
     </div>
   </section>
 
-  <section class="pedido">
-    <h2>Fazer um Pedido</h2>
-    <a href="https://wa.me/5511959492868" target="_blank">Chamar no WhatsApp</a>
+  <section id="tabela">
+    <h2>Tabela de Preços</h2>
+    <table>
+      <thead>
+        <tr><th>Produto</th><th>Preço</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Bolo 1</td><td>R$ </td></tr>
+        <tr><td>Bolo 2</td><td>R$ </td></tr>
+        <tr><td>Bolo de Pote</td><td>R$ </td></tr>
+        <tr><td>Pão de Mel</td><td>R$ </td></tr>
+        <tr><td>Trufa de Coco</td><td>R$ </td></tr>
+      </tbody>
+    </table>
   </section>
+
+  <div id="modal" class="modal" onclick="fecharModal()">
+    <img id="imagem-ampliada">
+  </div>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+    function abrirWhatsApp() {
+      window.open("https://wa.me/5511959492868", "_blank");
+    }
+    function ampliar(img) {
+      const modal = document.getElementById('modal');
+      const imgAmpliada = document.getElementById('imagem-ampliada');
+      imgAmpliada.src = img.src;
+      modal.style.display = 'flex';
+    }
+    function fecharModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
