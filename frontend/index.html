@@ -31,13 +31,13 @@
   <section id="galeria" class="galeria">
     <h2>Galeria</h2>
     <div class="fotos">
-      <div class="foto"><img src="imagens/bolo1.jpg" alt="Bolo 1" onclick="ampliar(this)"><p>Bolo 1</p></div>
-      <div class="foto"><img src="imagens/bolo2.jpg" alt="Bolo 2" onclick="ampliar(this)"><p>Bolo 2</p></div>
-      <div class="foto"><img src="imagens/bolo3.jpg" alt="Bolo 3" onclick="ampliar(this)"><p>Bolo 3</p></div>
-      <div class="foto"><img src="imagens/bolo4.jpg" alt="Bolo 4" onclick="ampliar(this)"><p>Bolo 4</p></div>
-      <div class="foto"><img src="imagens/boloninho.jpg" alt="Bolo de pote" onclick="ampliar(this)"><p>Bolo de Pote</p></div>
-      <div class="foto"><img src="imagens/paomel.jpg" alt="Pão de mel" onclick="ampliar(this)"><p>Pão de Mel</p></div>
-      <div class="foto"><img src="imagens/trufacoco.jpg" alt="Trufa de coco" onclick="ampliar(this)"><p>Trufa de Coco</p></div>
+      <div class="foto"><img src="imagens/bolo1.jpg" alt="Bolo Caseirinho" onclick="ampliar(this)" tabindex="0"><p>Bolo 1</p></div>
+      <div class="foto"><img src="imagens/bolo2.jpg" alt="Bolo Confeitado" onclick="ampliar(this)" tabindex="0"><p>Bolo 2</p></div>
+      <div class="foto"><img src="imagens/bolo3.jpg" alt="Bolo Rústico" onclick="ampliar(this)" tabindex="0"><p>Bolo 3</p></div>
+      <div class="foto"><img src="imagens/bolo4.jpg" alt="Bolo Confeitado Aniversário" onclick="ampliar(this)" tabindex="0"><p>Bolo 4</p></div>
+      <div class="foto"><img src="imagens/boloninho.jpg" alt="Bolo de pote Diversos Sabores" onclick="ampliar(this)" tabindex="0"><p>Bolo de Pote</p></div>
+      <div class="foto"><img src="imagens/paomel.jpg" alt="Pão de mel Diversos Sabores" onclick="ampliar(this)" tabindex="0"><p>Pão de Mel</p></div>
+      <div class="foto"><img src="imagens/trufacoco.jpg" alt="Trufa de Diversos Sabores" onclick="ampliar(this)" tabindex="0"><p>Trufa de Coco</p></div>
     </div>
   </section>
 
@@ -45,21 +45,25 @@
     <h2>Tabela de Preços</h2>
     <table>
       <thead>
-        <tr><th>Produto</th><th>Preço</th></tr>
+        <tr><th>Produto</th><th>Preços a Partir de</th></tr>
       </thead>
       <tbody>
-        <tr><td>Bolo 1</td><td>R$ </td></tr>
-        <tr><td>Bolo 2</td><td>R$ </td></tr>
-        <tr><td>Bolo de Pote</td><td>R$ </td></tr>
-        <tr><td>Pão de Mel</td><td>R$ </td></tr>
-        <tr><td>Trufa de Coco</td><td>R$ </td></tr>
+        <tr><td>Bolo Caseirinho</td><td>R$ 35,00</td></tr>
+        <tr><td>Bolo Rústico</td><td>R$ 85,00</td></tr>
+        <tr><td>Bolo de Pote (Sabores)</td><td>R$ 10,00</td></tr>
+        <tr><td>Pão de Mel (Sabores)</td><td>R$ 7,00</td></tr>
+        <tr><td>Trufa (Sabores)</td><td>R$ 4,00</td></tr>
       </tbody>
     </table>
   </section>
 
-  <div id="modal" class="modal" onclick="fecharModal()">
-    <img id="imagem-ampliada">
+  <div id="modal" class="modal" onclick="fecharModal()" tabindex="0">
+    <img id="imagem-ampliada" alt="Imagem ampliada">
   </div>
+
+  <footer>
+    <p>© 2025 Flávia Fernandes Confeitaria — Todos os direitos reservados.</p>
+  </footer>
 
   <script>
     function scrollToSection(id) {
